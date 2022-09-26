@@ -1,9 +1,5 @@
 <template>
-  <section>
-    <div class="container">
-      푸터
-    </div>
-  </section>
+<div></div>  
 </template>
 
 <script>

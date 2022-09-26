@@ -1,0 +1,308 @@
+/*
+display
+clear
+float
+overflow
+position
+top
+right
+botton
+left
+z-index
+width
+height
+margin
+padding
+background:#color (url) no-repeat x y;
+background-size:;
+border
+color
+font-size
+font-weight
+text-overflow
+text-align
+line-height
+text-indent
+transform
+transition
+box-sizing
+white-space
+*/
+
+$h48 : 48px;
+$h56 : 56px;
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;vertical-align:baseline;-ms-overflow-style:scrollbar;box-sizing:border-box;-webkit-box-sizing:border-box;}
+// font:inherit;
+
+html,
+body {
+    font-family: $defaultFont;
+    font-size:100%;font-weight:500;color:$gray-64;line-height:1.5;letter-spacing:-0.0375em;word-wrap:break-word;word-break:keep-all;-webkit-text-size-adjust:none;-ms-text-size-adjust:100%;text-size-adjust:none;
+
+    &.scroll-lock {
+        overflow: hidden !important;
+    }    
+    &.scroll {
+        overflow: auto !important;
+    }
+}
+
+a {
+    color: $gray-64;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+em, address {
+    font-style: normal;
+}
+
+ul,
+ol {
+    li {
+        list-style-type: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+
+fieldset {
+    min-width: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+legend {
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+table caption {
+    display: none;
+}
+
+button,
+[role="button"] {
+    border: 0;
+    background: none;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+
+input,
+textarea,
+select {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: none;
+    outline-style: none;
+    border-radius: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+    
+input::-ms-check{
+    display:none
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+// details {
+//     summary {
+//         position: relative;
+//         min-height: auto;
+//         list-style: none;
+//         cursor: pointer;
+    
+//         &:after {
+//             @extend %icon-drop-down;
+    
+//             display: block;
+//             position: absolute;
+//             top: 50%;
+//             right: 0;
+//             transform: translateY(-50%);
+//         }
+    
+//         &:before {
+//             display: none;
+//         }
+
+//         &:focus {
+//             @extend %focus-outline;
+//         }
+    
+//         &::-webkit-details-marker {
+//             display: none;
+//         }
+//     }
+
+//     &[open] {
+//         > summary {
+//             &:after {
+//                 background-image: url($icon-drop-down-up-img);
+//             }
+//         }
+//     }
+    
+//     &:disabled, &[disabled="disabled"] {
+//         &[fixed] {
+//             > summary {
+//                 &::after {
+//                     display: none;
+//                 }
+//             }
+//         }
+
+//         > summary {
+//             @extend %icon-drop-down-large;
+
+//             pointer-events: none;
+            
+//             &::after {
+//                 background: url($icon-large-drop-down-img) no-repeat center center;
+//             }
+//         }
+
+//         &[icon-hide], &[icon-hide="icon-hide"] {
+//             > summary {
+//                 &::after {
+//                     display: none;
+//                 }
+//             }
+//         }
+
+//         &[open] {
+//             > summary {
+//                 &:after {
+//                     background-image: url($icon-large-drop-down-up-img-disabled);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+textarea {
+    resize: none;
+
+    &:focus {
+        @extend %focus-outline;
+    }
+}
+
+mark {
+    background: none;
+}
+
+// select {
+//     -webkit-appearance: none;
+//     appearance: none;
+//     width: 100%;
+//     min-height: 32px;
+//     padding: 0 32px 0 12px;
+//     font-size: 12px;
+//     letter-spacing: -0.4px;
+//     border: none;
+//     background: url(#{$images}/common/down-line-16.svg) no-repeat right 8px top 50%;
+//     font-size: 13px;
+
+//     &:disabled {
+//         background: url(#{$images}/common/down-line-16-disabled.svg) no-repeat right 8px top 50%;
+//         color: $gray-12;
+//     }
+// }
+
+/* IE 에서 Select box 화살표 제거 */ 
+select::-ms-expand { display: none; }
+
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"] {
+    & + * {
+        cursor: pointer;
+    }
+
+    &:disabled + * {
+        cursor: no-drop !important;
+    }
+}
+
+button {
+    &:disabled {
+        opacity: .7;
+        cursor: no-drop;
+    }
+}
+
+::placeholder {color: $gray-60;}
+:-moz-placeholder {color: $gray-60;}
+::-moz-placeholder {color: $gray-60;}
+::-webkit-input-placeholder {color: $gray-60;}
+
+// input[type='text']:focus::-webkit-input-placeholder{visibility:hidden}
+// input[type='text']:focus:-moz-placeholder{visibility:hidden}
+// input[type='text']:focus::-moz-placeholder{visibility:hidden}
+// input[type='text']:focus:-ms-input-placeholder{visibility:hidden}
+
+%btnMargin {
+    display: inline-block;
+    width: calc(100% - 4px);
+    height: 48px;
+    margin: 0 4px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    text-align: center;
+
+    &:only-child {
+        width: 100%;
+    }
+
+    &.h48 {
+        height: $h48;
+    }
+
+    &.h56 {
+        height: $h56;
+    }
+}
+    
+.blind {
+    overflow: hidden !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+
+    &:active, &:focus {
+        outline: none !important;
+    }
+}

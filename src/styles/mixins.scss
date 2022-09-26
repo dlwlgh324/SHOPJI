@@ -1,0 +1,126 @@
+@mixin line($lineCount: 1) {
+    /* 사용법 : @include line(라인수) */
+    @if($lineCount == 1) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    @else {
+        /* autoprefixer: ignore next */
+        -webkit-box-orient: vertical;
+        /* autoprefixer: on */
+        display: block;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        -webkit-line-clamp: $lineCount;
+    }
+}
+
+@mixin checkbox {
+    $unchecked: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $checked: "~@assets/images/pc/common/icon-radio-checked.png";
+    $mobile-uncheck: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $mobile-check: "~@assets/images/pc/common/icon-radio-uncheck.png";
+
+    .fb {
+        &__checkbox {
+            > label {
+                margin-right: 10px;
+                font-size: 0;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+
+            input[type="checkbox"] {
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                background: url($unchecked) no-repeat center center/22px 22px;
+                color: transparent;
+                border-radius: 0;
+                vertical-align: middle;
+                box-sizing: border-box;
+                cursor: pointer;
+                -webkit-box-sizing: border-box;
+                -webkit-appearance: none;
+
+                &:checked {
+                    background: url($checked) no-repeat center center/22px 22px;
+                }
+
+                &::-ms-check {
+                    background-color: inherit;
+                    border-width: 0;
+                    border-color: inherit;
+                    border-radius: inherit;
+                    color: transparent;
+                }
+
+                & + label,
+                & + span {
+                    margin-left: 10px;
+                    color: #000;
+                    font-size: 14px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@mixin radiobox {
+    $unchecked: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $checked: "~@assets/images/pc/common/icon-radio-checked.png";
+    $mobile-uncheck: "~@assets/images/pc/common/icon-radio-uncheck.png";
+    $mobile-check: "~@assets/images/pc/common/icon-radio-uncheck.png";
+
+    .fb {
+        &__radio {
+            > label {
+                margin-right: 10px;
+                font-size: 0;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            input[type="radio"] {
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                background: url($unchecked)  no-repeat center center/22px 22px;
+                color: transparent;
+                border-radius: 0;
+                vertical-align: middle;
+                box-sizing: border-box;
+                cursor: pointer;
+                -webkit-box-sizing: border-box;
+                -webkit-appearance: none;
+
+                &:checked {
+                    background: url($checked)  no-repeat center center/22px 22px;
+                }
+
+                &::-ms-check {
+                    background-color: inherit;
+                    border-width: 0;
+                    border-color: inherit;
+                    border-radius: inherit;
+                    color: transparent;
+                }
+
+                & + label,
+                & + span {
+                    margin-left: 10px;
+                    color: #000;
+                    font-size: 14px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+// #region common
+$width: 1200px;
+
+// color
+$black: #000;
+$white: #fff;
+$white-light: rgba(255, 255, 255, .12);
+$white-pressed: rgba(0,0,0,.02);
+$gray-80: #333;
+$gray-68: #525252;
+$gray-64: #5C5C5C;
+$gray-60: #666666;
+$gray-48: #858585;
+$gray-40: #999999;
+$gray-32: #adadad;
+$gray-24: #c2c2c2;
+$gray-16: #d6d6d6;
+$gray-12: #e0e0e0;
+$gray-8: #ebebeb;
+$gray-4: #f5f5f5;
+$gray-3: #f7f7f7;
+$gray-2: #fafafa;
+
+// #region 
+$primary: #E70053;
+$primary-hover: #E70053;
+$primary-pressed : rgba(0,0,0,.08);
+$primary-dark: #7fc241;
+$primary-light: #f4fce2;
+$secondary-dark: #004f18;
+$secondary-pure: #009333;
+$secondary-ligh: #f5f8f6;
+$secondary-blur: #5395aa;
+$point: #E70053;
+$point-pure: #f49433;
+$point-dark: #004f18;
+$point-light:#ffeee5;
+
+// #region font
+$defaultFont : 'Montserrat', 'NotoSans', '맑은 고딕', 'malgun gothic','Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans', sans-serif;
+$notoFamily: 'NotoSans', $defaultFont;
+$noto : $notoFamily;
+
+// #region images
+$images : "/public/assets/images";
+
+$h48 : 48px;
+$h56 : 56px;
+
+// #retion icons
+// dropdown
+$icon-drop-down-img: "#{$images}/common/down-line-20.svg";
+$icon-drop-down-img-disabled: "#{$images}/common/down-line-20-disabled.svg";
+$icon-drop-down-up-img: "#{$images}/common/up-line-20.svg";
+$icon-drop-down-up-img-disabled: "#{$images}/common/up-line-20-disabled.svg";
+$icon-large-drop-down-img: "#{$images}/common/down-line-24.svg";
+$icon-large-drop-down-img-disabled: "#{$images}/common/down-line-24-disabled.svg";
+$icon-large-drop-down-up-img: "#{$images}/common/up-line-24.svg";
+$icon-large-drop-down-up-img-disabled: "#{$images}/common/up-line-24-disabled.svg";
